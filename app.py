@@ -30,14 +30,14 @@ def input_image_details(uploaded_file):
 st.set_page_config(page_title="InvoQuery")
 
 st.header("InvoQuery")
-input=st.text_input("Input Prompt:", key="input")
+input=st.text_input("Ask question:", key="input")
 uploaded_file=st.file_uploader("Choose an image of the invoice...", type=["jpg","'jpeg","png"])
 image=""
 if uploaded_file is not None:
     image=Image.open(uploaded_file)
     st.image(image,caption="Uploaded Image.",use_column_width=True)
 
-submit=st.button("Tell me about the invoice")
+submit=st.button("Submit")
 
 input_prompt="""
 You are an expert in understanding invoices. We will upload a image as invoice 
