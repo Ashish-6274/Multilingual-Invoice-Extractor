@@ -31,7 +31,7 @@ st.set_page_config(page_title="InvoQuery")
 
 st.header("InvoQuery")
 input=st.text_input("Ask question:", key="input")
-uploaded_file=st.file_uploader("Choose an image of the invoice...", type=["jpg","'jpeg","png"])
+uploaded_file=st.file_uploader("Choose an image of the invoice: ", type=["jpg","'jpeg","png"])
 image=""
 if uploaded_file is not None:
     image=Image.open(uploaded_file)
