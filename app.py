@@ -27,9 +27,9 @@ def input_image_details(uploaded_file):
         raise FileNotFoundError("No file uploaded")
 #initialize streamlit app
 
-st.set_page_config(page_title="Multilanguage Invoice Extractor")
+st.set_page_config(page_title="InvoQuery")
 
-st.header("Multilanguage Invoice Extractor")
+st.header("InvoQuery")
 input=st.text_input("Input Prompt:", key="input")
 uploaded_file=st.file_uploader("Choose an image of the invoice...", type=["jpg","'jpeg","png"])
 image=""
