@@ -1,9 +1,10 @@
 import streamlit as st
 from PIL import Image
 import google.generativeai as genai
+import os 
+key = os.getenv("GEMINI_API_KEY")
 
-
-genai.configure(api_key="AIzaSyARfxUm2mCyh-UGRAUL0LJSbUQ6pCsnNLc")
+genai.configure(api_key=key)
 ## function to load Gemini Flash
 model=genai.GenerativeModel('gemini-1.5-flash')
 
